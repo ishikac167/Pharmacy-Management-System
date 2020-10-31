@@ -54,6 +54,7 @@ price integer,
 quantity numeric,
 company_id numeric(4),
 date_of_expiry date,
+date_of_manufacture date,
 FOREIGN KEY (company_id) references Company(company_id),
 PRIMARY KEY(BID)
 );
@@ -77,3 +78,5 @@ EID numeric(4),
 FOREIGN KEY (CID) references Customer(CID),
 FOREIGN KEY (EID) references Employee(EID)
 );
+
+drop table Brand;
