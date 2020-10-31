@@ -78,5 +78,3 @@ EID numeric(4),
 FOREIGN KEY (CID) references Customer(CID),
 FOREIGN KEY (EID) references Employee(EID)
 );
-
-drop table Brand;
