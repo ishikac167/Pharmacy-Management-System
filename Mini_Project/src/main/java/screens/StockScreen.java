@@ -28,10 +28,10 @@ public class StockScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        company = new javax.swing.JTextField();
+        company_name = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        brand = new javax.swing.JTextField();
+        brand_name = new javax.swing.JTextField();
         jLablel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -44,15 +44,19 @@ public class StockScreen extends javax.swing.JFrame {
         drug = new javax.swing.JTextField();
         manufacture = new javax.swing.JTextField();
         expiry = new javax.swing.JTextField();
+        comoany_id = new javax.swing.JLabel();
+        company_id = new javax.swing.JTextField();
+        add_to_stock = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("ABC Pharmacy Stock Form");
 
-        company.addActionListener(new java.awt.event.ActionListener() {
+        company_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                companyActionPerformed(evt);
+                company_nameActionPerformed(evt);
             }
         });
 
@@ -60,9 +64,9 @@ public class StockScreen extends javax.swing.JFrame {
 
         jLabel3.setText("Brand name");
 
-        brand.addActionListener(new java.awt.event.ActionListener() {
+        brand_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brandActionPerformed(evt);
+                brand_nameActionPerformed(evt);
             }
         });
 
@@ -90,6 +94,16 @@ public class StockScreen extends javax.swing.JFrame {
             }
         });
 
+        comoany_id.setText("Company ID");
+
+        add_to_stock.setText("Add to Stock");
+        add_to_stock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add_to_stockActionPerformed(evt);
+                onclickadd_to_stock(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,15 +124,21 @@ public class StockScreen extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(company)
-                    .addComponent(brand)
+                    .addComponent(company_name)
+                    .addComponent(brand_name)
                     .addComponent(barcode)
                     .addComponent(quantity)
                     .addComponent(price, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
                 .addGap(40, 40, 40)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(drug, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(drug, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(comoany_id)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(company_id)))
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -128,6 +148,10 @@ public class StockScreen extends javax.swing.JFrame {
                     .addComponent(expiry, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                     .addComponent(manufacture))
                 .addGap(166, 166, 166))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(add_to_stock, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,12 +159,14 @@ public class StockScreen extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(company, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(company_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comoany_id, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(company_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(brand, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(brand_name, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel6)
                         .addComponent(drug, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(manufacture, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,19 +191,21 @@ public class StockScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 114, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(add_to_stock, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void companyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyActionPerformed
+    private void company_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_company_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_companyActionPerformed
+    }//GEN-LAST:event_company_nameActionPerformed
 
-    private void brandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brandActionPerformed
+    private void brand_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brand_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_brandActionPerformed
+    }//GEN-LAST:event_brand_nameActionPerformed
 
     private void drugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drugActionPerformed
         // TODO add your handling code here:
@@ -186,6 +214,14 @@ public class StockScreen extends javax.swing.JFrame {
     private void manufactureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manufactureActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_manufactureActionPerformed
+
+    private void add_to_stockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_to_stockActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_add_to_stockActionPerformed
+
+    private void onclickadd_to_stock(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onclickadd_to_stock
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onclickadd_to_stock
 
     /**
      * @param args the command line arguments
@@ -223,9 +259,12 @@ public class StockScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton add_to_stock;
     private javax.swing.JTextField barcode;
-    private javax.swing.JTextField brand;
-    private javax.swing.JTextField company;
+    private javax.swing.JTextField brand_name;
+    private javax.swing.JLabel comoany_id;
+    private javax.swing.JTextField company_id;
+    private javax.swing.JTextField company_name;
     private javax.swing.JTextField drug;
     private javax.swing.JTextField expiry;
     private javax.swing.JLabel jLabel1;
