@@ -5,11 +5,15 @@
  */
 package screens;
 
+import models.Brand;
+
 /**
  *
  * @author Shilpi
  */
 public class StockAdded extends javax.swing.JFrame {
+
+    static Brand brand;
 
     /**
      * Creates new form StockAdded
