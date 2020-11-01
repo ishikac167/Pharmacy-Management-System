@@ -151,39 +151,16 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="companytabpic">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\OWNER\Desktop\Hetu\PROJECT\medical-cross-health-pharmacy-logo-829822.jpg"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="brandtab">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\OWNER\Desktop\Hetu\PROJECT\herbal-capsule-logo-design-template-vector-21072290.jpg"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="purchasehistpic">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\OWNER\Desktop\Hetu\PROJECT\customer-linear-icon-modern-outline-customer-logo-concept-wh-customer-linear-icon-modern-outline-customer-logo-concept-white-133515252.jpg"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="invoicetabpic">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\OWNER\Desktop\Hetu\PROJECT\530-invoice-templates.jpg"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="admintabpic">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\OWNER\Desktop\Hetu\PROJECT\Pharmacy Project +Database + Jars\Pharmacy-Management-System\src\img\Untitled.png"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="companytab">
           <Properties>
