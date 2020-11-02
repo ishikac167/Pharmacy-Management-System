@@ -49,7 +49,7 @@ public class InvoiceScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
-        jLabel1.setText("ABC Pharmacy Invoice Generator");
+        jLabel1.setText("MyPharma Pharmacy Invoice Generator");
 
         jLabel2.setText("Customer ID");
 
@@ -152,6 +152,7 @@ public class InvoiceScreen extends javax.swing.JFrame {
 
     private void generateInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateInvoiceActionPerformed
         // TODO add your handling code here:
+        
         InvoiceGenerated generate = new InvoiceGenerated();
         generate.setVisible(true);
     }//GEN-LAST:event_generateInvoiceActionPerformed
