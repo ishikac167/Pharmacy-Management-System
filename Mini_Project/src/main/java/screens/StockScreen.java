@@ -225,6 +225,7 @@ public class StockScreen extends javax.swing.JFrame {
             System.err.println("e");
         }
         
+        StockAdded.brand = brand;
         StockAdded stock = new StockAdded();
         stock.setVisible(true);
     }//GEN-LAST:event_add_to_stockActionPerformed
