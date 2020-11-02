@@ -32,7 +32,6 @@ public class NewJFrame2 extends javax.swing.JFrame {
         brandtab = new javax.swing.JLabel();
         purchasehistpic = new javax.swing.JLabel();
         invoicetabpic = new javax.swing.JLabel();
-        admintabpic = new javax.swing.JLabel();
         companytab = new javax.swing.JButton();
         purchasehist = new javax.swing.JButton();
         addbrand = new javax.swing.JButton();
@@ -40,6 +39,7 @@ public class NewJFrame2 extends javax.swing.JFrame {
         invoicetab = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         ADmintab = new javax.swing.JButton();
+        admintabpic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 153, 153));
@@ -48,15 +48,13 @@ public class NewJFrame2 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 204));
 
-        companytabpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Hetu\\PROJECT\\medical-cross-health-pharmacy-logo-829822.jpg")); // NOI18N
+        companytabpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Pharmacy-Management-System\\Mini_Project\\target\\classes\\screens\\medical-cross-health-pharmacy-logo-829822.jpg")); // NOI18N
 
-        brandtab.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Hetu\\PROJECT\\herbal-capsule-logo-design-template-vector-21072290.jpg")); // NOI18N
+        brandtab.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Pharmacy-Management-System\\Mini_Project\\target\\classes\\screens\\herbal-capsule-logo-design-template-vector-21072290.jpg")); // NOI18N
 
-        purchasehistpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Hetu\\PROJECT\\customer-linear-icon-modern-outline-customer-logo-concept-wh-customer-linear-icon-modern-outline-customer-logo-concept-white-133515252.jpg")); // NOI18N
+        purchasehistpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Pharmacy-Management-System\\Mini_Project\\target\\classes\\screens\\customer-linear-icon-modern-outline-customer-logo-concept-wh-customer-linear-icon-modern-outline-customer-logo-concept-white-133515252.jpg")); // NOI18N
 
-        invoicetabpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Hetu\\PROJECT\\530-invoice-templates.jpg")); // NOI18N
-
-        admintabpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Hetu\\PROJECT\\Pharmacy Project +Database + Jars\\Pharmacy-Management-System\\src\\img\\Untitled.png")); // NOI18N
+        invoicetabpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Pharmacy-Management-System\\Mini_Project\\target\\classes\\screens\\530-invoice-templates.jpg")); // NOI18N
 
         companytab.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         companytab.setText("ADD A COMPANY");
@@ -109,6 +107,9 @@ public class NewJFrame2 extends javax.swing.JFrame {
             }
         });
 
+        admintabpic.setIcon(new javax.swing.ImageIcon("C:\\Users\\OWNER\\Desktop\\Pharmacy-Management-System\\Mini_Project\\target\\classes\\screens\\Untitled.png")); // NOI18N
+        admintabpic.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -122,33 +123,32 @@ public class NewJFrame2 extends javax.swing.JFrame {
                                 .addComponent(companytabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(companytab)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(brandtab))
+                                .addGap(18, 18, 18)
+                                .addComponent(brandtab, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(ADmintab, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(70, 70, 70))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(addbrand, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addComponent(viewstockstab, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(admintabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(19, 19, 19))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(invoicetabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(invoicetab, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(45, 45, 45)
                                 .addComponent(purchasehistpic, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23)))
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(ADmintab, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(70, 70, 70))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(purchasehist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(viewstockstab, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(addbrand, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(admintabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(25, 25, 25))))
+                                .addGap(18, 18, 18)
+                                .addComponent(purchasehist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE))))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 806, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(2, 2, 2))
         );
@@ -159,36 +159,38 @@ public class NewJFrame2 extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(brandtab, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(companytabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGap(101, 101, 101)
-                                    .addComponent(invoicetab, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGap(60, 60, 60)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(purchasehistpic)
-                                        .addComponent(invoicetabpic)))))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(14, 14, 14)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(addbrand, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(viewstockstab, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(purchasehist, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(admintabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(ADmintab, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(companytab, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(22, 22, 22))
+                        .addComponent(companytab, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(purchasehistpic, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(brandtab, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(companytabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(101, 101, 101)
+                                        .addComponent(invoicetab, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(42, 42, 42)
+                                        .addComponent(invoicetabpic))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(addbrand, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(viewstockstab, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(126, 126, 126)
+                                        .addComponent(purchasehist, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(admintabpic, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(ADmintab, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(31, Short.MAX_VALUE))))
         );
 
         getContentPane().add(jPanel2);
@@ -213,7 +215,7 @@ viewstocks stock=new viewstocks();
     }//GEN-LAST:event_ADmintabActionPerformed
 
     private void addbrandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbrandActionPerformed
-         StockAdded addstock=new StockAdded();
+         StockScreen addstock=new StockScreen();
         addstock.setVisible(true);      
     }//GEN-LAST:event_addbrandActionPerformed
 
