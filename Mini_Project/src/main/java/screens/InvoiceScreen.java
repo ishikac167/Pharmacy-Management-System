@@ -44,7 +44,7 @@ public class InvoiceScreen extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         date = new javax.swing.JTextField();
-        generate_invoice = new javax.swing.JButton();
+        generateInvoice = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,11 +87,10 @@ public class InvoiceScreen extends javax.swing.JFrame {
 
         jLabel4.setText("Date");
 
-        generate_invoice.setText("Generate Invoice");
-        generate_invoice.addActionListener(new java.awt.event.ActionListener() {
+        generateInvoice.setText("Generate Invoice");
+        generateInvoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generate_invoiceActionPerformed(evt);
-                onclickgenerate_invoice(evt);
+                generateInvoiceActionPerformed(evt);
             }
         });
 
@@ -99,14 +98,6 @@ public class InvoiceScreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(228, 228, 228))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(576, 576, 576)
-                .addComponent(generate_invoice, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -120,12 +111,21 @@ public class InvoiceScreen extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(customer_name)
+                        .addComponent(customer_name, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
                         .addGap(39, 39, 39)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(228, 228, 228))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(generateInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,28 +142,19 @@ public class InvoiceScreen extends javax.swing.JFrame {
                         .addComponent(customer_name, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(generate_invoice, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+                .addGap(28, 28, 28)
+                .addComponent(generateInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void generate_invoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generate_invoiceActionPerformed
+    private void generateInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateInvoiceActionPerformed
         // TODO add your handling code here:
-        String customer_id = this.customer_id.getText();
-        String customer_name = this.customer_name.getText();
-        String date = this.date.getText();
-        //String brand = this.jTable1.getText();
-        
         InvoiceGenerated generate = new InvoiceGenerated();
         generate.setVisible(true);
-    }//GEN-LAST:event_generate_invoiceActionPerformed
-
-    private void onclickgenerate_invoice(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onclickgenerate_invoice
-        // TODO add your handling code here:
-    }//GEN-LAST:event_onclickgenerate_invoice
+    }//GEN-LAST:event_generateInvoiceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,7 +195,7 @@ public class InvoiceScreen extends javax.swing.JFrame {
     private javax.swing.JTextField customer_id;
     private javax.swing.JTextField customer_name;
     private javax.swing.JTextField date;
-    private javax.swing.JButton generate_invoice;
+    private javax.swing.JButton generateInvoice;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

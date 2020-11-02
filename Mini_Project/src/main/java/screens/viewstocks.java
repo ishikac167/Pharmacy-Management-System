@@ -6,6 +6,11 @@
 package screens;
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -20,6 +25,7 @@ public class viewstocks extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(new Color(0,204,204));
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,7 +39,7 @@ public class viewstocks extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        viewStock = new javax.swing.JTable();
         Sortlist = new javax.swing.JComboBox<>();
         sortlb = new javax.swing.JLabel();
 
@@ -44,7 +50,7 @@ public class viewstocks extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("                                                               STOCK LIST");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        viewStock.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -55,7 +61,7 @@ public class viewstocks extends javax.swing.JFrame {
                 "COMPANY NAME", "BRAND NAME", "DRUG ", "PRICE", "QUANTITY", "DATE OF EXPIRY"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(viewStock);
 
         Sortlist.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BRAND NAME", "PRICE", "DATE OF EXPIRY", "QUANTITY" }));
 
@@ -149,7 +155,7 @@ public class viewstocks extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel sortlb;
+    private javax.swing.JTable viewStock;
     // End of variables declaration//GEN-END:variables
 }
