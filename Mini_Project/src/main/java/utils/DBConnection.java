@@ -11,9 +11,8 @@ import java.sql.*;
  * @author Shilpi
  */
 public class DBConnection {
-    public Connection createConnection() throws ClassNotFoundException {
+    public Connection createConnection() {
         try {
-            Class<?> forName = Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy_management?user=root&password=Ishanika167");
             return conn;
         }
