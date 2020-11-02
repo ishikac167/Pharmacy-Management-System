@@ -64,6 +64,7 @@
                                           <Component id="ADmintab" min="-2" pref="107" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                                       </Group>
+<<<<<<< HEAD
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="addbrand" min="-2" pref="111" max="-2" attributes="0"/>
@@ -76,6 +77,9 @@
                                           <Component id="admintabpic" min="-2" pref="197" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                       </Group>
+=======
+                                      <Component id="addbrand" alignment="1" min="-2" pref="111" max="-2" attributes="0"/>
+>>>>>>> e8c137c288ca8e0d9c17e1525dc0ad2e8ae0546a
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -104,6 +108,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                           <Component id="companytab" min="-2" pref="57" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -145,6 +150,44 @@
                               </Group>
                           </Group>
                           <EmptySpace pref="31" max="32767" attributes="0"/>
+=======
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="brandtab" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="companytabpic" min="-2" pref="145" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                                  <Component id="invoicetab" min="-2" pref="39" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="purchasehistpic" min="-2" max="-2" attributes="0"/>
+                                      <Component id="invoicetabpic" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="addbrand" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="viewstockstab" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="purchasehist" min="-2" pref="49" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="admintabpic" min="-2" pref="269" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="ADmintab" min="-2" pref="38" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="companytab" min="-2" pref="57" max="-2" attributes="0"/>
+>>>>>>> e8c137c288ca8e0d9c17e1525dc0ad2e8ae0546a
                       </Group>
                   </Group>
               </Group>
@@ -153,6 +196,7 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="companytabpic">
+<<<<<<< HEAD
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\OWNER\Desktop\Pharmacy-Management-System\Mini_Project\target\classes\screens\medical-cross-health-pharmacy-logo-829822.jpg"/>
@@ -179,6 +223,16 @@
               <Image iconType="2" name="C:\Users\OWNER\Desktop\Pharmacy-Management-System\Mini_Project\target\classes\screens\530-invoice-templates.jpg"/>
             </Property>
           </Properties>
+=======
+        </Component>
+        <Component class="javax.swing.JLabel" name="brandtab">
+        </Component>
+        <Component class="javax.swing.JLabel" name="purchasehistpic">
+        </Component>
+        <Component class="javax.swing.JLabel" name="invoicetabpic">
+        </Component>
+        <Component class="javax.swing.JLabel" name="admintabpic">
+>>>>>>> e8c137c288ca8e0d9c17e1525dc0ad2e8ae0546a
         </Component>
         <Component class="javax.swing.JButton" name="companytab">
           <Properties>
