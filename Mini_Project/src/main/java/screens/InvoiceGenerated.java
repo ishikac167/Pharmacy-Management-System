@@ -5,6 +5,8 @@
  */
 package screens;
 
+import java.awt.Color;
+
 /**
  *
  * @author Shilpi
@@ -16,6 +18,7 @@ public class InvoiceGenerated extends javax.swing.JFrame {
      */
     public InvoiceGenerated() {
         initComponents();
+        getContentPane().setBackground(new Color(0,204,204));
     }
 
     /**

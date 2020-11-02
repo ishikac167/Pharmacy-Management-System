@@ -5,6 +5,7 @@
  */
 package screens;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -22,6 +23,7 @@ public class InvoiceScreen extends javax.swing.JFrame {
      */
     public InvoiceScreen() {
         initComponents();
+        getContentPane().setBackground(new Color(0,204,204));
     }
 
     /**

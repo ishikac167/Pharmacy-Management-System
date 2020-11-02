@@ -13,7 +13,7 @@ import java.sql.*;
 public class DBConnection {
     public Connection createConnection() {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy_management?user=root&password=Ishanika167");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy_management?user=root&passowrd=Ishanika167");
             return conn;
         }
         catch(SQLException e) {
