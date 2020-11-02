@@ -213,7 +213,7 @@ viewstocks stock=new viewstocks();
     }//GEN-LAST:event_ADmintabActionPerformed
 
     private void addbrandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbrandActionPerformed
-         StockAdded addstock=new StockAdded();
+         StockScreen addstock=new StockScreen();
         addstock.setVisible(true);      
     }//GEN-LAST:event_addbrandActionPerformed
 
