@@ -29,25 +29,16 @@ public class adminlogin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        ausernamelabel = new javax.swing.JTextField();
-        apasswordlabel = new javax.swing.JTextField();
         adminusername = new javax.swing.JTextField();
         adminpassword = new javax.swing.JPasswordField();
         adminsubmit = new javax.swing.JButton();
+        usernamelb = new javax.swing.JLabel();
+        passwordlb = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("                 ADMINISTATOR LOGIN PAGE");
-
-        ausernamelabel.setText("USERNAME:");
-
-        apasswordlabel.setText("PASSWORD:");
-        apasswordlabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                apasswordlabelActionPerformed(evt);
-            }
-        });
 
         adminusername.setText("jTextField3");
         adminusername.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +56,12 @@ public class adminlogin extends javax.swing.JFrame {
             }
         });
 
+        usernamelb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        usernamelb.setText("USERNAME:");
+
+        passwordlb.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        passwordlb.setText("PASSWORD");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -77,10 +74,10 @@ public class adminlogin extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
+                                .addGap(35, 35, 35)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(ausernamelabel)
-                                    .addComponent(apasswordlabel, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE))
+                                    .addComponent(usernamelb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(passwordlb, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
                                 .addGap(46, 46, 46)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(adminusername)
@@ -97,13 +94,13 @@ public class adminlogin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ausernamelabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(adminusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(adminusername)
+                    .addComponent(usernamelb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(apasswordlabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(adminpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(adminpassword)
+                    .addComponent(passwordlb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(53, 53, 53)
                 .addComponent(adminsubmit)
                 .addContainerGap(62, Short.MAX_VALUE))
@@ -124,10 +121,6 @@ public class adminlogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void apasswordlabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apasswordlabelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_apasswordlabelActionPerformed
 
     private void adminusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminusernameActionPerformed
         // TODO add your handling code here:
@@ -181,9 +174,9 @@ public class adminlogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField adminpassword;
     private javax.swing.JButton adminsubmit;
     private javax.swing.JTextField adminusername;
-    private javax.swing.JTextField apasswordlabel;
-    private javax.swing.JTextField ausernamelabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel passwordlb;
+    private javax.swing.JLabel usernamelb;
     // End of variables declaration//GEN-END:variables
 }
