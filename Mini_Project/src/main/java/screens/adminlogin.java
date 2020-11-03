@@ -6,6 +6,11 @@
 package screens;
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import utils.DBConnection;
 
 /**
  *
@@ -128,13 +133,31 @@ public class adminlogin extends javax.swing.JFrame {
     }//GEN-LAST:event_pidActionPerformed
 
     private void AdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminLoginActionPerformed
-        // TODO add your handling code here:
+        
+            try {
+            DBConnection connection = new DBConnection();
+            Connection conn = connection.createConnection();
+            String sql = "Select pid, password from Pharmacist where pid=? and password=?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, pid.getText());
+            pstm.setString(2, password.getText());
+            ResultSet rs= pstm.executeQuery();
+            if(rs.next()){
+                JOptionPane.showMessageDialog(null,"Login successful");
+               AddEmployee EmployeeDetails = new AddEmployee();
+        EmployeeDetails.setVisible(true);
+            } else{
+                JOptionPane.showMessageDialog(null,"Username and Password do not match");
+                pid.setText("");
+                password.setText("");
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }
         String username = this.pid.getText();
         String password = this.password.getText();
         
         
-        AddEmployee EmployeeDetails = new AddEmployee();
-        EmployeeDetails.setVisible(true);
     }//GEN-LAST:event_AdminLoginActionPerformed
 
     /**

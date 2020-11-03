@@ -5,6 +5,12 @@
  */
 package screens;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import utils.DBConnection;
+
 /**
  *
  * @author Shilpi
@@ -117,7 +123,28 @@ public class adminlogin2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+        try {
+            DBConnection connection = new DBConnection();
+            Connection conn = connection.createConnection();
+            String sql = "Select pid, password from Pharmacist where pid=? and password=?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, pid.getText());
+            pstm.setString(2, password.getText());
+            ResultSet rs= pstm.executeQuery();
+            if(rs.next()){
+                JOptionPane.showMessageDialog(null,"Login successful");
+               EmployeeView Employeeview = new EmployeeView();
+        Employeeview.setVisible(true);
+            } else{
+                JOptionPane.showMessageDialog(null,"Username and Password do not match");
+                pid.setText("");
+                password.setText("");
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+        String username = this.pid.getText();
+        String password = this.password.getText();
     }//GEN-LAST:event_loginActionPerformed
 
     /**
