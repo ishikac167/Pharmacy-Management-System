@@ -20,7 +20,7 @@ public class Brand {
     private int quantity;
     private int price;
     
-    public Brand(String brand_name, int brand_id, int company_id, String barcode, String drug, String manufacture, String expiry, int quantity, int price) {
+    public Brand(int brand_id, String drug, String barcode, int price, int quantity, int company_id, String expiry, String manufacture, String brand_name) {
         this.brand_id = brand_id;
         this.company_id = company_id;
         this.brand_name = brand_name;

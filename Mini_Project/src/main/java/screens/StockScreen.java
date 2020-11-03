@@ -66,7 +66,7 @@ public class StockScreen extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("MyPharma Stock Form");
 
-        jLabel2.setText("Barnd Name");
+        jLabel2.setText("Brand Name");
 
         jLabel3.setText("Brand ID");
 
@@ -234,7 +234,7 @@ public class StockScreen extends javax.swing.JFrame {
         int quantity = Integer.parseInt(this.quantity.getText());
         int price = Integer.parseInt(this.price.getText());
         
-        Brand brand = new Brand(brand_name, brand_id, company_id, barcode, drug, manufacture, expiry, quantity, price);
+        Brand brand = new Brand(brand_id, drug, barcode, price, quantity, company_id, expiry, manufacture, brand_name);
         
         try {
             DBConnection connection = new DBConnection();

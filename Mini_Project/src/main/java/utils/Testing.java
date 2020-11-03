@@ -16,7 +16,7 @@ import utils.DBConnection;
  * @author Shilpi
  */
 public class Testing {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws ClassNotFoundException {
         try {
             DBConnection connect = new DBConnection();
             Connection conn = connect.createConnection();
