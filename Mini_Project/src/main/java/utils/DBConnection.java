@@ -11,9 +11,10 @@ import java.sql.*;
  * @author Shilpi
  */
 public class DBConnection {
-    public Connection createConnection() {
+    public Connection createConnection() throws ClassNotFoundException {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy_management?","root","Ishanika167");
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy_management","root","Ishanika167");
             return conn;
         }
         catch(SQLException e) {
