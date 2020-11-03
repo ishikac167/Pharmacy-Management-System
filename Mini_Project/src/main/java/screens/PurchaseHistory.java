@@ -36,7 +36,7 @@ public class PurchaseHistory extends javax.swing.JFrame {
         try {
             DBConnection connection = new DBConnection();
             Connection conn = connection.createConnection();
-            String query = "select * from company";
+            String query = "select * from purchase_history";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             Purchase_History history;
