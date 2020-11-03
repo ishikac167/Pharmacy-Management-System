@@ -66,24 +66,52 @@ public class StockScreen extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("MyPharma Stock Form");
 
+        brand_name.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("Brand Name");
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel3.setText("Brand ID");
 
+        brand_id.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        jLablel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLablel4.setText("Barcode");
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("Quantity");
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel4.setText("Price");
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel6.setText("Drug");
 
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel7.setText("Date of Manufacture");
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel8.setText("Date of Expiry");
 
+        barcode.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        quantity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        price.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        drug.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        manufacture.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        expiry.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        comoany_id.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         comoany_id.setText("Company ID");
 
+        company_id.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        add_to_stock.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add_to_stock.setText("Add to Stock");
         add_to_stock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,14 +269,14 @@ public class StockScreen extends javax.swing.JFrame {
             Connection conn = connection.createConnection();
             PreparedStatement ps = conn.prepareStatement("insert into brand values (?,?,?,?,?,?,?,?,?)");
             ps.setInt(1, brand_id);
-            ps.setString(2, brand_name);
-            ps.setString(3, drug);
-            ps.setString(4, barcode);
-            ps.setInt(5, price);
-            ps.setInt(6, quantity);
-            ps.setInt(7, company_id);
-            ps.setString(8, expiry);
-            ps.setString(9, manufacture);
+            ps.setString(2, drug);
+            ps.setString(3, barcode);
+            ps.setInt(4, price);
+            ps.setInt(5, quantity);
+            ps.setInt(6, company_id);
+            ps.setString(7, expiry);
+            ps.setString(8, manufacture);
+            ps.setString(9, brand_name);
             int out = ps.executeUpdate();
             if(out == 1){
                 System.out.println("Success");
@@ -263,10 +291,14 @@ public class StockScreen extends javax.swing.JFrame {
         }
         
         StockAdded.brand = brand;
+        setVisible(false);
+        dispose();
         StockAdded stock = new StockAdded();
-        StockScreen ss = new StockScreen();
+        //StockScreen ss = new StockScreen();
         stock.setVisible(true);
-        ss.setVisible(false);
+        stock.toFront();
+        stock.requestFocus();
+        //ss.setVisible(false);
     }//GEN-LAST:event_add_to_stockActionPerformed
 
     private void onclickadd_to_stock(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onclickadd_to_stock

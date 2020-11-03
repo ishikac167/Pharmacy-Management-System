@@ -129,7 +129,7 @@ public class adminlogin extends javax.swing.JFrame {
         String password = this.password.getText();
         
         
-        Employeetab EmployeeDetails = new Employeetab();
+        AddEmployee EmployeeDetails = new AddEmployee();
         EmployeeDetails.setVisible(true);
     }//GEN-LAST:event_AdminLoginActionPerformed
 
