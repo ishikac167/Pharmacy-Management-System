@@ -118,11 +118,11 @@ public class viewstocks extends javax.swing.JFrame {
 
             },
             new String [] {
-                "BRAND ID", "DRUG ", "BARCODE", "PRICE", "QUANTITY", "COMPANY ID", "DATE OF EXPIRY", "DATE OF MANUFACTURE", "BRAND NAME"
+                "BRAND ID", "DRUG ", "BARCODE", "PRICE", "QUANTITY", "COMPANY ID", "DATE OF MANUFACTURE", "DATE OF EXPIRY", "BRAND NAME"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {

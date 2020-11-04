@@ -113,11 +113,11 @@
                 <Column editable="true" title="BRAND ID" type="java.lang.Integer"/>
                 <Column editable="true" title="DRUG " type="java.lang.String"/>
                 <Column editable="true" title="BARCODE" type="java.lang.String"/>
-                <Column editable="true" title="PRICE" type="java.lang.Integer"/>
+                <Column editable="true" title="PRICE" type="java.lang.Float"/>
                 <Column editable="true" title="QUANTITY" type="java.lang.Integer"/>
                 <Column editable="true" title="COMPANY ID" type="java.lang.Integer"/>
-                <Column editable="true" title="DATE OF EXPIRY" type="java.lang.String"/>
                 <Column editable="true" title="DATE OF MANUFACTURE" type="java.lang.String"/>
+                <Column editable="true" title="DATE OF EXPIRY" type="java.lang.String"/>
                 <Column editable="true" title="BRAND NAME" type="java.lang.String"/>
               </Table>
             </Property>
