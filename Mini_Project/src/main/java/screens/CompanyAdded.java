@@ -51,7 +51,7 @@ public class CompanyAdded extends javax.swing.JFrame {
             }
         });
 
-        firstScreen.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        firstScreen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         firstScreen.setText("Return to First Screen");
         firstScreen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

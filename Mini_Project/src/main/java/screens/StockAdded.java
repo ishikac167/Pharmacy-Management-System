@@ -99,6 +99,8 @@ public class StockAdded extends javax.swing.JFrame {
 
     private void viewStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewStockActionPerformed
         // TODO add your handling code here:
+        setVisible(false);
+        dispose();
         viewstocks view = new viewstocks();
         view.setVisible(true);
     }//GEN-LAST:event_viewStockActionPerformed

@@ -219,6 +219,10 @@ public class companyform extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) { 
             Logger.getLogger(StockScreen.class.getName()).log(Level.SEVERE, null, ex);
         }
+        setVisible(false);
+        dispose();
+        CompanyAdded added= new CompanyAdded();
+        added.setVisible(true);
     }//GEN-LAST:event_addCompanyActionPerformed
 
     /**

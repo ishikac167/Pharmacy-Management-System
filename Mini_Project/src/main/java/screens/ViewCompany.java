@@ -85,6 +85,7 @@ public class ViewCompany extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         viewCompany = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        firstScreen = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel2.setText("DISPLAY COMPANY LIST");
@@ -116,6 +117,14 @@ public class ViewCompany extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/screens/Logo_Transparent.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
+        firstScreen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        firstScreen.setText("Return to First Screen");
+        firstScreen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstScreenActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -131,6 +140,10 @@ public class ViewCompany extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addGap(108, 108, 108))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(296, 296, 296)
+                .addComponent(firstScreen)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,11 +154,21 @@ public class ViewCompany extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(32, 32, 32)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 106, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(firstScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 51, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void firstScreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstScreenActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        dispose();
+        FirstScreen first = new FirstScreen();
+        first.setVisible(true);
+    }//GEN-LAST:event_firstScreenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +206,7 @@ public class ViewCompany extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton firstScreen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
