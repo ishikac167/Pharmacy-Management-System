@@ -43,7 +43,7 @@ public class EmployeeView extends javax.swing.JFrame {
             ResultSet rs = stmt.executeQuery(query);
             Employee employee;
             while(rs.next()) {
-                employee = new Employee(rs.getInt("eid"), rs.getString("fname"), rs.getString("lname"), rs.getString("employee_address"), rs.getString("dob"), rs.getInt("salary"), rs.getLong("phone_no"), rs.getInt("PID"));
+                employee = new Employee(rs.getInt("EID"), rs.getString("fname"), rs.getString("lname"), rs.getString("employee_address"), rs.getString("dob"), rs.getInt("salary"), rs.getLong("phone_no"), rs.getInt("PID"));
                 employeeList.add(employee);
             }
             
@@ -100,7 +100,7 @@ public class EmployeeView extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
