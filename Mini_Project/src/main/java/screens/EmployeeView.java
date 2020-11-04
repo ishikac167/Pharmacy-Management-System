@@ -38,12 +38,12 @@ public class EmployeeView extends javax.swing.JFrame {
         try {
             DBConnection connection = new DBConnection();
             Connection conn = connection.createConnection();
-            String query = "select * from company";
+            String query = "select * from employee";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             Employee employee;
             while(rs.next()) {
-                employee = new Employee(rs.getInt("EID"), rs.getString("fname"), rs.getString("lname"), rs.getString("employee_address"), rs.getString("dob"), rs.getInt("salary"), rs.getLong("phone_no"), rs.getInt("PID"));
+                employee = new Employee(rs.getInt("eid"), rs.getString("fname"), rs.getString("lname"), rs.getString("employee_address"), rs.getString("dob"), rs.getInt("salary"), rs.getLong("phone_no"), rs.getInt("PID"));
                 employeeList.add(employee);
             }
             
@@ -91,6 +91,7 @@ public class EmployeeView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        viewEmployees.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         viewEmployees.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
