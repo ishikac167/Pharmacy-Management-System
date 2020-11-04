@@ -46,7 +46,7 @@ public class FirstScreen extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        addEmployee = new javax.swing.JButton();
+        viewEmployee = new javax.swing.JButton();
         viewCompany = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -121,11 +121,11 @@ public class FirstScreen extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/screens/Logo.png"))); // NOI18N
         jLabel7.setText("jLabel7");
 
-        addEmployee.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        addEmployee.setText("View all Employee Details");
-        addEmployee.addActionListener(new java.awt.event.ActionListener() {
+        viewEmployee.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        viewEmployee.setText("View all Employee Details");
+        viewEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addEmployeeActionPerformed(evt);
+                viewEmployeeActionPerformed(evt);
             }
         });
 
@@ -152,7 +152,7 @@ public class FirstScreen extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(addEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(viewEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(employeeDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -212,7 +212,7 @@ public class FirstScreen extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(employeeDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(addEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(viewEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel3))))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -280,13 +280,13 @@ public class FirstScreen extends javax.swing.JFrame {
         showCompany.setVisible(true);
     }//GEN-LAST:event_viewCompanyActionPerformed
 
-    private void addEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEmployeeActionPerformed
+    private void viewEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewEmployeeActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         dispose();
-        EmployeeView showEmployees = new EmployeeView();
+        adminlogin2 showEmployees = new adminlogin2();
         showEmployees.setVisible(true);
-    }//GEN-LAST:event_addEmployeeActionPerformed
+    }//GEN-LAST:event_viewEmployeeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -325,7 +325,6 @@ public class FirstScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCompany;
-    private javax.swing.JButton addEmployee;
     private javax.swing.JButton addStock;
     private javax.swing.JButton employeeDetails;
     private javax.swing.JButton generateInvoice;
@@ -338,6 +337,7 @@ public class FirstScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JButton purchaseHistory;
     private javax.swing.JButton viewCompany;
+    private javax.swing.JButton viewEmployee;
     private javax.swing.JButton viewStock;
     // End of variables declaration//GEN-END:variables
 

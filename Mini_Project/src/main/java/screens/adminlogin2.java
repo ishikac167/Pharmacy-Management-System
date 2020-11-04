@@ -5,6 +5,12 @@
  */
 package screens;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import utils.DBConnection;
+
 /**
  *
  * @author Shilpi
@@ -34,7 +40,7 @@ public class adminlogin2 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         pid = new javax.swing.JTextField();
-        password = new javax.swing.JTextField();
+        password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,8 +66,6 @@ public class adminlogin2 extends javax.swing.JFrame {
 
         pid.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        password.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,20 +78,21 @@ public class adminlogin2 extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(117, 117, 117)
-                                .addComponent(jLabel2))
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(78, 78, 78)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap(222, Short.MAX_VALUE))
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(password))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pid)
-                            .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                            .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(199, 199, 199))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pid, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(199, 199, 199))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,11 +109,13 @@ public class adminlogin2 extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(pid, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(0, 18, Short.MAX_VALUE))
+                    .addComponent(password))
+                .addGap(18, 18, 18)
                 .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57))
         );
@@ -117,7 +124,31 @@ public class adminlogin2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+        try {
+            DBConnection connection = new DBConnection();
+            Connection conn = connection.createConnection();
+            String sql = "Select pid, password from Pharmacist where pid=? and password=?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, pid.getText());
+            pstm.setString(2, password.getText());
+            ResultSet rs= pstm.executeQuery();
+            if(rs.next()){
+                JOptionPane.showMessageDialog(null,"Login successful");
+                setVisible(false);
+                dispose();
+                EmployeeView Employeeview = new EmployeeView();
+        Employeeview.setVisible(true);
+            } else{
+                JOptionPane.showMessageDialog(null,"Username and Password do not match");
+                pid.setText("");
+                password.setText("");
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+        String username = this.pid.getText();
+        String password = this.password.getText();
+        
     }//GEN-LAST:event_loginActionPerformed
 
     /**
@@ -162,7 +193,7 @@ public class adminlogin2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JButton login;
-    private javax.swing.JTextField password;
+    private javax.swing.JPasswordField password;
     private javax.swing.JTextField pid;
     // End of variables declaration//GEN-END:variables
 }

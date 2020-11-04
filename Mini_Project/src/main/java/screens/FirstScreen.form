@@ -38,7 +38,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="addEmployee" max="32767" attributes="0"/>
+                                  <Component id="viewEmployee" max="32767" attributes="0"/>
                                   <Component id="employeeDetails" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -118,7 +118,7 @@
                           <Group type="102" attributes="0">
                               <Component id="employeeDetails" min="-2" pref="36" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="addEmployee" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="viewEmployee" min="-2" pref="39" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -259,7 +259,7 @@
         <Property name="text" type="java.lang.String" value="jLabel7"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="addEmployee">
+    <Component class="javax.swing.JButton" name="viewEmployee">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
@@ -267,7 +267,7 @@
         <Property name="text" type="java.lang.String" value="View all Employee Details"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addEmployeeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewEmployeeActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="viewCompany">
