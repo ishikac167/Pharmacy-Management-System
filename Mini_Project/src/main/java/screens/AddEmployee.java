@@ -25,7 +25,7 @@ public class AddEmployee extends javax.swing.JFrame {
      */
     public AddEmployee() {
         initComponents();
-        getContentPane().setBackground(new Color(0,204,204));
+        getContentPane().setBackground(new Color(104,234,231));
     }
 
     /**

@@ -26,7 +26,7 @@ public class StockScreen extends javax.swing.JFrame {
      */
     public StockScreen() {
         initComponents();
-        getContentPane().setBackground(new Color(0,204,204));
+        getContentPane().setBackground(new Color(104,234,231));
     }
 
     /**

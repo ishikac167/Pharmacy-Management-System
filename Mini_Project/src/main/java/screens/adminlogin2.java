@@ -5,6 +5,7 @@
  */
 package screens;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,6 +23,7 @@ public class adminlogin2 extends javax.swing.JFrame {
      */
     public adminlogin2() {
         initComponents();
+        getContentPane().setBackground(new Color(104,234,231));
     }
 
     /**

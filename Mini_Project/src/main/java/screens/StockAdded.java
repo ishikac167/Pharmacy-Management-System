@@ -21,7 +21,7 @@ public class StockAdded extends javax.swing.JFrame {
      */
     public StockAdded() {
         initComponents();
-        getContentPane().setBackground(new Color(0,204,204));
+        getContentPane().setBackground(new Color(104,234,231));
     }
 
     /**
@@ -46,6 +46,7 @@ public class StockAdded extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/screens/Logo.png"))); // NOI18N
         jLabel2.setText("jLabel2");
 
+        viewStock.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         viewStock.setText("View Stocks");
         viewStock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,7 +55,7 @@ public class StockAdded extends javax.swing.JFrame {
         });
 
         firstScreen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        firstScreen.setText("Return to First Screen");
+        firstScreen.setText("Return to HOME");
         firstScreen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 firstScreenActionPerformed(evt);
@@ -72,10 +73,10 @@ public class StockAdded extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(firstScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58)
+                        .addComponent(firstScreen)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))
+                        .addGap(155, 155, 155))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(viewStock, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(136, 136, 136))))

@@ -31,7 +31,7 @@ public class viewstocks extends javax.swing.JFrame {
      */
     public viewstocks() {
         initComponents();
-        getContentPane().setBackground(new Color(0,204,204));
+        getContentPane().setBackground(new Color(104,234,231));
         showStock();
     }
     
@@ -141,7 +141,7 @@ public class viewstocks extends javax.swing.JFrame {
         jLabel3.setText("jLabel3");
 
         firstScreen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        firstScreen.setText("Return to Frst Screen");
+        firstScreen.setText("Return to HOME");
         firstScreen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 firstScreenActionPerformed(evt);
@@ -161,10 +161,10 @@ public class viewstocks extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(381, 381, 381)
+                                .addGap(352, 352, 352)
                                 .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(290, 290, 290)
+                                .addGap(277, 277, 277)
                                 .addComponent(jLabel1)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -180,7 +180,7 @@ public class viewstocks extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(28, 28, 28)
+                        .addGap(29, 29, 29)
                         .addComponent(jLabel2))
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)

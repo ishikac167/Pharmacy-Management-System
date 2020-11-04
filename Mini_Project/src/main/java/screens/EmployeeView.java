@@ -29,7 +29,7 @@ public class EmployeeView extends javax.swing.JFrame {
      */
     public EmployeeView() {
         initComponents();
-        getContentPane().setBackground(new Color(0,204,204));
+        getContentPane().setBackground(new Color(104,234,231));
         showEmployee();
     }
     
@@ -116,7 +116,7 @@ public class EmployeeView extends javax.swing.JFrame {
         jLabel1.setText("MyPharma Employee Details");
 
         firstScreen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        firstScreen.setText("Return to First Screen");
+        firstScreen.setText("Return to HOME");
         firstScreen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 firstScreenActionPerformed(evt);
