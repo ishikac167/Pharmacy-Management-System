@@ -46,7 +46,9 @@ public class PurchaseHistory extends javax.swing.JFrame {
             while(rs.next()) {
                 history = new Purchase(rs.getInt("purchase_id"), rs.getString("date_of_purchase"), rs.getInt("CID"), rs.getInt("quantity"), rs.getInt("rate"), rs.getInt("amount"), rs.getString("barcode"), rs.getString("brand"));
                 purchaseHistory.add(history);
+                
             }
+            
             
         } catch (SQLException e) {
             System.err.println(e);
@@ -246,7 +248,9 @@ public class PurchaseHistory extends javax.swing.JFrame {
                 jLabel6.setText(rs.getString("fname"));
                 jLabel7.setText(rs.getString("lname"));
                 showHistory();
+                
             }
+            
            
             
             
