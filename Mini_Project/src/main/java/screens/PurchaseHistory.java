@@ -39,12 +39,12 @@ public class PurchaseHistory extends javax.swing.JFrame {
         try {
             DBConnection connection = new DBConnection();
             Connection conn = connection.createConnection();
-            String query = "select * from Purchase_history";
+            String query = "select * from Purchase_history where cid="+cid.getText();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             Purchase history;
             while(rs.next()) {
-                history = new Purchase(rs.getInt("purchase_id"), rs.getString("date_of_purchase"), rs.getInt("CID"), rs.getInt("quantity"), rs.getInt("rate"), rs.getInt("amount"), rs.getString("barcode"), rs.getString("brand"));
+                history = new Purchase(rs.getInt("purchase_id"), rs.getString("date_of_purchase"), rs.getInt("CID"), rs.getInt("quantity"), rs.getInt("rate"), rs.getInt("amount"), rs.getString("barcode"), rs.getString("brand"), rs.getInt("EID"));
                 purchaseHistory.add(history);
                 
             }
@@ -63,7 +63,7 @@ public class PurchaseHistory extends javax.swing.JFrame {
     public void showHistory() {
         ArrayList<Purchase> list = purchaseHistory();
         DefaultTableModel model = (DefaultTableModel)viewPurchaseHistory.getModel();
-        Object[] row = new Object[7];
+        Object[] row = new Object[8];
         for(int i=0; i<list.size(); i++) {
             row[0] = list.get(i).getPurchase_id();
             row[1] = list.get(i).getDate_of_purchase();
@@ -72,6 +72,7 @@ public class PurchaseHistory extends javax.swing.JFrame {
             row[4] = list.get(i).getAmount();
             row[5] = list.get(i).getBarcode();
             row[6] = list.get(i).getBrand();
+            row[7] = list.get(i).getEID();
             model.addRow(row);
         }
     }
@@ -128,11 +129,11 @@ public class PurchaseHistory extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Purchase ID", "Date", "Quantity", "Rate", "Amount", "Barcode", "Brand"
+                "Purchase ID", "Date", "Quantity", "Rate", "Amount", "Barcode", "Brand", "EID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -156,15 +157,8 @@ public class PurchaseHistory extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(firstScreen)
-                .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 792, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,6 +182,12 @@ public class PurchaseHistory extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(showPurchaseHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 792, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(firstScreen))
+                .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

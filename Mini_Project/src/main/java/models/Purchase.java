@@ -18,8 +18,9 @@ public class Purchase {
     private String barcode;
     private String brand;
     private int customer_id;
+    private int EID;
     
-    public Purchase(int purchase_id, String date_of_purchase, int customer_id, int quantity, int rate, int amount, String barcode, String brand) {
+    public Purchase(int purchase_id, String date_of_purchase, int customer_id, int quantity, int rate, int amount, String barcode, String brand, int EID) {
         this.purchase_id = purchase_id;
         this.date_of_purchase = date_of_purchase;
         this.customer_id = customer_id;
@@ -28,6 +29,7 @@ public class Purchase {
         this.amount = amount;
         this.barcode = barcode;
         this.brand = brand;
+        this.EID = EID;
     }
 
     public int getPurchase_id() {
@@ -92,6 +94,14 @@ public class Purchase {
 
     public void setCustomer_id(int customer_id) {
         this.customer_id = customer_id;
+    }
+    
+    public int getEID() {
+        return EID;
+    }
+    
+    public void setEID(int EID) {
+        this.EID = EID;
     }
     
     

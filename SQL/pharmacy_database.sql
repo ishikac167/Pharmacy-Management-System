@@ -12,6 +12,14 @@ PRIMARY KEY(CID)
 );
 
 insert into customer values(145, 'Neha', 'Agarwal', 9816735678, 'Santacruz');
+insert into customer values(957, 'Rashmi', 'Shetty', 8518945278, 'Khar');
+insert into customer values(138, 'Nikhil', 'Mody', 7829478626, 'Vile Parle');
+insert into customer values(297, 'Daksh', 'Doshi', 9167356725, 'Khar');
+
+select * from customer;
+
+delete from Customer
+where CID = 2875;
 
 alter table customer
 drop constraint customer_chk_1;
@@ -50,18 +58,24 @@ FOREIGN KEY (PID) references Pharmacist(PID),
 PRIMARY KEY(EID)
 );
 
+alter table employee
+drop constraint employee_chk_1;
+
 select * from Employee;
+
+insert into employee values(9653, 'Parth', 'Shah', 'Vile Parle West', '1990-06-19', 4500, 9265180537, 1234);
 
 create table Company
 (company_id numeric(4),
-company_name varchar(10),
+company_name varchar(30),
 company_address varchar(50),
 phone_no numeric(10),
 check(phone_no=10),
 PID numeric(4),
-FOREIGN KEY (PID) references Pharmacist(PID),
 PRIMARY KEY(company_id)
 );
+
+drop table Company;
 
 create table Brand
 (BID numeric(4),
@@ -100,10 +114,23 @@ drop column total_amt,
 add column amount numeric(5),
 drop column payment_mode;
 
-insert into purchase_history values(176, '2020-11-02', 145, 3, 30, 90, 'GHT672', 'Crocin');
+select * from Purchase_history;
+
+insert into purchase_history values(176, '2020-11-02', 145, 3, 30, 90, 'GHT672', 'Crocin', 1675);
+insert into purchase_history values(2875, '2020-11-04', 957, 1, 51, 51, '589PH', 'Sinarest', 4976);
+insert into purchase_history values(1165, '2020-11-10', 138, 2, 131, 262, '738TS', 'Thyronorm 50', 9653);
+insert into purchase_history values(2916, '2020-11-09', 297, 2, 171, 342, '739TS', 'Thyronorm 75', 3965);
 
 alter table Purchase_history
 add column barcode varchar(20);
+
+alter table Purchase_history
+add column EID numeric(4);
+
+truncate table Purchase_history;
+
+alter table Purchase_history
+drop constraint purchase_history_ibfk_1;
 
 alter table Purchase_history
 add column brand varchar(30);
@@ -139,6 +166,9 @@ insert into brand values(672, 'Paracetemol', 'GHT672', 51, 35, 561, '2019-02-13'
 select * from company;
 alter table company
 drop constraint company_chk_1;
+
+delete from company
+where company_id = 974;
 
 insert into company values(456, 'Micro Labs', 'Delhi', 9826716388, 1234);
 insert into company values(234, 'Sanofi', 'Mumbai', 9826481388, 6543);
